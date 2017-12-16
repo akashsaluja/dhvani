@@ -6,6 +6,7 @@ module.exports = function (context, req) {
         const url = "http://google.com";
         const lib = url.startsWith('https') ? require('https') : require('http');
         const request = lib.get(url, (response) => {
+            context.log('Came here 3');
             context.res = {
                 status: 200,
                 body: response
