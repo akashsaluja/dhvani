@@ -4,7 +4,13 @@ module.exports = function (context, req) {
     if (req.query.name || (req.body && req.body.name)) {
         context.res = {
             // status: 200, /* Defaults to 200 */
-            body: "Hey " + (req.query.name || req.body.name)
+            var client = new HttpClient();
+            var url = "http:\/\/google.com";
+            client.get(url, function(response) {
+                // do something with response
+                body: response
+            });
+
         };
     }
     else {
