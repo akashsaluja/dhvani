@@ -9,7 +9,7 @@ module.exports = function (context, req) {
             context.log('Came here 3');
             context.res = {
                 status: 200,
-                body: JSON.stringify(response)
+                body: "JSON.stringify(response)"
             };
             context.log('Came here 4');
             context.done();
