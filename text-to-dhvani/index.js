@@ -1,16 +1,15 @@
+const request = require('request')
 module.exports = function (context, req) {
     context.log('JavaScript HTTP trigger function processed a request.');
     if (req.query.name || (req.body && req.body.name)) {
         context.log('Came here 1');
-        const myRequest = new Request('http://www.bing.com', {method: 'GET'});
-        fetch(myRequest).
-        then(response => {
+        request('http://www.bing.com', function (error, response, body) {
             context.res = {
                 status: 200,
                 body: response
             };
             context.done();
-        });
+          });
     }
     else {
         context.log('Came here 2');

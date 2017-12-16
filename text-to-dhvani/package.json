@@ -1,0 +1,9 @@
+{
+    "name": "text-to-dhvani",
+    "version": "0.0.1",
+    "description": "API wrapper to convert text to audio",
+    "main": "index.js",
+    "dependencies": {
+        "request": "^2.83.0"
+    }
+}
