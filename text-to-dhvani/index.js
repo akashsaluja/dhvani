@@ -3,7 +3,7 @@ module.exports = function (context, req) {
     if (req.query.name || (req.body && req.body.name)) {
         context.log('Came here 1');
         // request('http://www.bing.com', function (error, response, body) {
-        const url = "http://bing.com";
+        const url = "http://google.com";
         const lib = url.startsWith('https') ? require('https') : require('http');
         const request = lib.get(url, (response) => {
             context.res = {
