@@ -1,7 +1,7 @@
 module.exports = function (context, req) {
     context.log('JavaScript HTTP trigger function processed a request.');
     context.res = {
-        status: 200
+        status: 200,
         body: 'Hey AKash'
     };
     // if (req.query.name || (req.body && req.body.name)) {
