@@ -7,13 +7,16 @@ module.exports = function (context, req) {
         const lib = url.startsWith('https') ? require('https') : require('http');
         const request = lib.get(url, (response) => {
             context.log('Came here 3');
-            context.log(response);
-            context.res = {
-                status: 200,
-                body: "JSON.stringify(response)"
-            };
-            context.log('Came here 4');
-            context.done();
+            response.setEncoding('utf8');
+            response.on('data', function (chunk) {
+                context.res = {
+                    status: 200,
+                    body: JSON.stringify(chunk)
+                };
+                context.log('Came here 4');
+                context.done();
+            });
+            
         });
             
         //   });
