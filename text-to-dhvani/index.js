@@ -3,7 +3,7 @@ module.exports = function (context, req) {
     context.res = {
         status: 200
         body: 'Hey AKash'
-    }
+    };
     // if (req.query.name || (req.body && req.body.name)) {
     //     context.log('Came here 1');
     //     request('http://www.bing.com', function (error, response, body) {
