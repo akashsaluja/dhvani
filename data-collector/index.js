@@ -12,6 +12,8 @@ module.exports = function (context, req) {
                     status: 200,
                     body: body
             };
+            context.bindings.outputQueueItem = "Name passed to the function: " + 
+            (req.query.name || req.body.name);
             context.done();
         });
     }
