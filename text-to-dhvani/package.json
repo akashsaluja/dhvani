@@ -1,0 +1,8 @@
+{
+    "name": "text-to-dhvani",
+    "version": "0.0.1",
+    "description": "Text to dhvani",
+    "dependencies": {
+        "request": "^2.83.0"
+    }
+}
