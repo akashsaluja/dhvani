@@ -1,0 +1,9 @@
+{
+    "name": "data-collector",
+    "version": "0.0.1",
+    "description": "Text for dhvani",
+    "dependencies": {
+        "sshpk": "^1.13.1",
+        "less": "^2.7.3"
+    }
+}
