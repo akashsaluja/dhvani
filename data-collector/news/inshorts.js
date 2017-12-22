@@ -30,7 +30,7 @@ module.exports.getDataInshorts =  function(context) {
                     }
                 },
                 onend: function() {
-                    console.log(newsItems);
+                    context.log(newsItems);
                     resolve(newsItems);
                 }
             }, {decodeEntities: true});
