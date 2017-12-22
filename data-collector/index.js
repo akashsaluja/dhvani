@@ -1,8 +1,7 @@
-var request = require('request');
 module.exports = function (context, req) {
     context.log('Data Collector functions has started functioning.');
     var inshorts = require('./news/inshorts');
-    inshorts.getDataInshorts().then(
+    inshorts.getDataInshorts(context).then(
         (items) => {
             console.log(items);
             context.done();

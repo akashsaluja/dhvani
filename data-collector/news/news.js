@@ -1,4 +1,4 @@
-export class News {
+module.exports.News =  class News {
     constructor(headline, text, timestamp) {
       this.headline = headline;
       this.text = text;
