@@ -4,7 +4,8 @@
     "description": "Text for dhvani",
     "dependencies": {
         "sshpk": "^1.13.1",
-        "less": "^2.7.3",
-        "request": "2.83.0"
+        "request": "2.83.0",
+        "html-entities": "^1.2.1",
+        "htmlparser2": "^3.9.2"
     }
 }
