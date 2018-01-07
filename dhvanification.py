@@ -22,6 +22,7 @@ def dhvanify(content):
         else:
             finalAudio = finalAudio + snippet
     finalAudio.export("tmp/final.wav", format="wav")
+    return "tmp/final.wav"
 
     
     
