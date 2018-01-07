@@ -6,4 +6,4 @@ def get_news():
     parser = inshorts_parser.InShortsParser()
     response = requests.get('https://www.inshorts.com/en/read')
     parser.feed(response.text)
-    return parser.getNewsArticles()
+    return parser.getNewsArticles()[0:10]
