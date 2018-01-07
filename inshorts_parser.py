@@ -1,10 +1,12 @@
 from html.parser import HTMLParser
+import news
 
 class InShortsParser(HTMLParser):
 
     def __init__(self):
         super(InShortsParser,self).__init__()
         self.articleBody = None
+        self.newsItems = []
 
     def handle_starttag(self, tag, attrs):
         for attr in attrs:
@@ -13,5 +15,8 @@ class InShortsParser(HTMLParser):
 
     def handle_data(self, data):
         if bool(self.articleBody):
-            print("Article     :", data)
+            self.newsItems.append(news.NewsItem(data))
         self.articleBody = False
+
+    def getNewsArticles(self):
+        return self.newsItems
