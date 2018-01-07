@@ -13,4 +13,4 @@ name = "pypi"
 
 requests = "*"
 htmlparser = "*"
-os = "*"
+pydub = "*"
