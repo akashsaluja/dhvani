@@ -1,5 +1,6 @@
 from content import Content
 from bingtts import Translator
+import time
 from pydub import AudioSegment
 import os
 
@@ -12,6 +13,7 @@ def dhvanify(content):
         finalText.append(val.body)
     for idx, text in enumerate(finalText):
         output = translator.speak(text, "en-US", "Female", "riff-16khz-16bit-mono-pcm")
+        time.sleep(1)
         with open("tmp/file%s.wav"%(idx), "wb") as f:
             f.write(output)
         audioOutputs.append(AudioSegment.from_wav("tmp/file%s.wav"%(idx)))
